@@ -1,0 +1,20 @@
+[package]
+name = "token-swap-program"
+version = "0.1.0"
+edition = "2021"
+description = "AMM Token Swap Program - widely used in Solana DeFi ecosystem"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+solana-program = "~1.18.0"
+spl-token = "4.0"
+borsh = "0.10.3"
+borsh-derive = "0.10.3"
+
+[dev-dependencies]
+solana-program-test = "~1.18.0"
+solana-sdk = "~1.18.0"
+spl-token = { version = "4.0", features = ["no-entrypoint"] }
+tokio = { version = "1.0", features = ["macros"] }
